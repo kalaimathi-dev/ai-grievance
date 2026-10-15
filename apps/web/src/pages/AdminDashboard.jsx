@@ -161,6 +161,13 @@ export const AdminDashboard = () => {
                     {selectedComplaint.imageVerification?.confidence ? ` · Confidence ${Math.round(selectedComplaint.imageVerification.confidence * 100)}%` : ''}
                   </p>
                   {selectedComplaint.imageVerification?.reason ? <p className="mt-1 text-xs text-slate-400">{selectedComplaint.imageVerification.reason}</p> : null}
+                  {selectedComplaint.imageAttachment.data ? (
+                    <img
+                      src={`data:${selectedComplaint.imageAttachment.mimeType};base64,${selectedComplaint.imageAttachment.data}`}
+                      alt={`Proof submitted for ${selectedComplaint.complaintNumber}`}
+                      className="mt-3 max-h-72 w-full rounded-xl object-contain"
+                    />
+                  ) : null}
                 </div>
               ) : null}
 
