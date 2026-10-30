@@ -20,7 +20,7 @@ const ROUTING_RULES = [
   {
     category: ComplaintCategories.STREET_LIGHTING,
     departmentCode: 'ELEC',
-    keywords: ['street light', 'lamp', 'lighting', 'dark road', 'pole light']
+    keywords: ['street light', 'streetlight', 'lamp', 'lighting', 'dark road', 'pole light']
   },
   {
     category: ComplaintCategories.SANITATION,
